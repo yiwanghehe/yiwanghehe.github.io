@@ -2,408 +2,317 @@
 <html>
 <head>
   <meta charset="utf-8">
+  
+  
   <title>Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Hexo">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="总体是围绕贾志刚的《opencv 30讲》来学习 url:https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1i54y1m7tw&#x2F; 1.环境搭建url:https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1i54y1m7tw&#x2F;2.图像的读取与显示有关函数1234567Matimreadimshowsrc.emptynamedWindowwaitKeydestroyAl">
-<meta property="og:type" content="article">
-<meta property="og:title" content="opencv入门学习(基于c++)">
-<meta property="og:url" content="https://yiwanghehe.github.io/2024/03/01/yiwanghehe'dicks/index.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://yiwanghehe.github.io/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="总体是围绕贾志刚的《opencv 30讲》来学习 url:https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1i54y1m7tw&#x2F; 1.环境搭建url:https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1i54y1m7tw&#x2F;2.图像的读取与显示有关函数1234567Matimreadimshowsrc.emptynamedWindowwaitKeydestroyAl">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-03-01T14:32:37.730Z">
-<meta property="article:modified_time" content="2024-03-06T15:43:02.128Z">
 <meta property="article:author" content="yiwanghehe">
-<meta property="article:tag" content="opencv">
 <meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-<link rel="icon" href="/img/myhead.jpg">
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
-<link href="/css/style.css?v=1.1.0" rel="stylesheet">
-
-<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
-
-<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
-
-<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<script src="/js/titleTip.js?v=1.1.0" ></script>
-
-<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
-<script>
-    hljs.initHighlightingOnLoad();
-</script>
-
-<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
-
-
-
-<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
-
-<script src="/js/iconfont.js?v=1.1.0" ></script>
-
+  
+  
 <meta name="generator" content="Hexo 6.3.0"></head>
-<div style="display: none">
-  <input class="theme_disqus_on" value="false">
-  <input class="theme_preload_comment" value="">
-  <input class="theme_blog_path" value="">
-  <input id="theme_shortcut" value="true" />
-  <input id="theme_highlight_on" value="true" />
-  <input id="theme_code_copy" value="true" />
-</div>
-
-
 
 <body>
-<aside class="nav mobile">
-    <div class="nav-left">
-        <a href="/"
-   class="avatar_target">
-    <img class="avatar"
-         src="/img/myhead.jpg"/>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://yiwanghehe.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-yiwanghehe&#39;dicks" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/01/yiwanghehe'dicks/" class="article-date">
+  <time class="dt-published" datetime="2024-03-01T14:32:37.730Z" itemprop="datePublished">2024-03-01</time>
 </a>
-<div class="author">
-    <span>yiwanghehe</span>
-</div>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/03/01/yiwanghehe'dicks/">opencv入门学习(基于c++)</a>
+    </h1>
+  
 
-<div class="icon">
+      </header>
     
-        
-            <a title="rss"
-               href="/atom.xml"
-               target="_blank">
-                
-                    <svg class="iconfont-svg" aria-hidden="true">
-                        <use xlink:href="#icon-rss"></use>
-                    </svg>
-                
-            </a>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-</div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>总体是围绕贾志刚的《opencv 30讲》来学习 url:<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1i54y1m7tw/">https://www.bilibili.com/video/BV1i54y1m7tw/</a></p>
+<h2 id="1-环境搭建"><a href="#1-环境搭建" class="headerlink" title="1.环境搭建"></a>1.环境搭建</h2><h3 id="url-https-www-bilibili-com-video-BV1i54y1m7tw"><a href="#url-https-www-bilibili-com-video-BV1i54y1m7tw" class="headerlink" title="url:https://www.bilibili.com/video/BV1i54y1m7tw/"></a>url:<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1i54y1m7tw/">https://www.bilibili.com/video/BV1i54y1m7tw/</a></h3><h2 id="2-图像的读取与显示"><a href="#2-图像的读取与显示" class="headerlink" title="2.图像的读取与显示"></a>2.图像的读取与显示</h2><h3 id="有关函数"><a href="#有关函数" class="headerlink" title="有关函数"></a>有关函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Mat</span><br><span class="line">imread</span><br><span class="line">imshow</span><br><span class="line">src.empty</span><br><span class="line">namedWindow</span><br><span class="line">waitKey</span><br><span class="line">destroyAllWindows</span><br></pre></td></tr></table></figure>
+
+<h3 id="相关演示代码"><a href="#相关演示代码" class="headerlink" title="相关演示代码"></a>相关演示代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;opencv2/opencv.hpp&gt;</span></span><br><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line">using namespace cv;</span><br><span class="line">int main(int argc, char** argv)</span><br><span class="line">&#123;</span><br><span class="line">	Mat src = imread(<span class="string">&quot;D:/opencv4.8.0_learning/image/poster.png&quot;</span>,IMREAD_GRAYSCALE);</span><br><span class="line">    //Mat即matrix矩阵,定义一个矩阵src</span><br><span class="line">    //imread函数读取路径下的图像，第一个参数为路径，第二个为色彩，如上述即为灰度色彩(若不填写则为</span><br><span class="line">	默认图像色彩)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (src.empty()) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;no way&quot;</span>);</span><br><span class="line">		<span class="built_in">return</span> -1;</span><br><span class="line">	&#125;</span><br><span class="line">    //若src(imread读出来的图像)为空，则返回-1</span><br><span class="line"></span><br><span class="line">	namedWindow(<span class="string">&quot;输出图像&quot;</span>, WINDOW_FREERATIO);</span><br><span class="line">    //namedWindow函数对输出图像窗口进行自定义，第一个参数要对应imshow函数里的第一个参数；</span><br><span class="line">    //如第二个参数为自由比率的窗口</span><br><span class="line">    </span><br><span class="line">	imshow(<span class="string">&quot;输出图像&quot;</span>, src);</span><br><span class="line">    //imshow函数能创建一个显示src的窗口</span><br><span class="line">    //第一个参数为窗口左上角的名称，第二个为对象名</span><br><span class="line"></span><br><span class="line">	waitKey(0);</span><br><span class="line">    //使窗口停留</span><br><span class="line">    </span><br><span class="line">	destroyAllWindows();</span><br><span class="line">    //关闭所有窗口</span><br><span class="line"></span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
+<h2 id="3-图像色彩空间转换"><a href="#3-图像色彩空间转换" class="headerlink" title="3.图像色彩空间转换"></a>3.图像色彩空间转换</h2><h3 id="有关函数-1"><a href="#有关函数-1" class="headerlink" title="有关函数"></a>有关函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cvtColor</span><br><span class="line">imwrite</span><br></pre></td></tr></table></figure>
+
+<h3 id="相关代码演示"><a href="#相关代码演示" class="headerlink" title="相关代码演示"></a>相关代码演示</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Mat src = imread(<span class="string">&quot;D:/opencv4.8.0_learning/image/poster.png&quot;</span>);</span><br><span class="line">Mat hsv, gray;</span><br><span class="line">cvtColor(src, hsv, COLOR_BGR2HSV);</span><br><span class="line">cvtColor(src, gray, COLOR_BGR2GRAY);</span><br><span class="line">//cvtColor函数实现色彩空间转换</span><br><span class="line">//第一个参数为InputArray，第二个为OutputArray，即输入输出的矩阵</span><br><span class="line">//第三个参数以COLOR_BGR2HSV为例,将BGR图像转换成HSV图像</span><br><span class="line"></span><br><span class="line">imshow(<span class="string">&quot;hsv&quot;</span>, hsv);</span><br><span class="line">imshow(<span class="string">&quot;gray&quot;</span>, gray);</span><br><span class="line"></span><br><span class="line">imwrite(<span class="string">&quot;D:/opencv4.8.0_learning/image/jiba.png&quot;</span>, hsv);</span><br><span class="line">imwrite(<span class="string">&quot;D:/opencv4.8.0_learning/image/jiba2.png&quot;</span>, gray);</span><br><span class="line">//imwrite函数实现保存图像，第一个参数为保存路径，第二个为对应图像矩阵</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="4-图像对象的创建和克隆拷贝赋值"><a href="#4-图像对象的创建和克隆拷贝赋值" class="headerlink" title="4.图像对象的创建和克隆拷贝赋值"></a>4.图像对象的创建和克隆拷贝赋值</h2><h3 id="有关函数-2"><a href="#有关函数-2" class="headerlink" title="有关函数"></a>有关函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Mat::zeros</span><br><span class="line">Mat::ones</span><br><span class="line">src.cols</span><br><span class="line">src.rows</span><br><span class="line">src.channels</span><br><span class="line">Scalar</span><br><span class="line">src.clone</span><br><span class="line">src.copyTo</span><br></pre></td></tr></table></figure>
+
+<h2 id="相关代码演示-1"><a href="#相关代码演示-1" class="headerlink" title="相关代码演示"></a>相关代码演示</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Mat src = Mat::zeros(Size(8, 8), CV_8UC3);</span><br><span class="line">cout &lt;&lt; <span class="string">src &lt;&lt; endl;</span></span><br><span class="line"><span class="string">//Mat::zeros创建空白图像，其中zero为初始化矩阵数字全为0</span></span><br><span class="line"><span class="string">//第一个参数为Size(宽，高) 相当于8*8个像素点,第二个参数CV_8UC3,8位unsigned char 3通道</span></span><br><span class="line"><span class="string">//通道数相当于每个像素点由多少个数值构成，如三通道则每个像素点由三个数值同时构成(通道数也称维度)</span></span><br><span class="line"><span class="string">//从一通道到三通道相当于一个像素点从一个数值变成了三个数值组成，这三个数值组成一个像素点，但这些数值</span></span><br><span class="line"><span class="string">还是在原矩阵的同一行，下面一节修改矩阵数值时能更有体会</span></span><br><span class="line"><span class="string">cout &lt;&lt; &quot;width:&quot; &lt;&lt; src</span>.cols &lt;&lt; <span class="string">endl;</span></span><br><span class="line"><span class="string">cout &lt;&lt; &quot;height:&quot; &lt;&lt; src.rows &lt;&lt; endl</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;channels:&quot;</span> &lt;&lt; <span class="string">src.channels() &lt;&lt; endl;</span></span><br><span class="line"><span class="string">//分别打印宽，高，通道数</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Mat src = Mat::ones(Size(8, 8), CV_8UC3);</span><br><span class="line">cout &lt;&lt; <span class="string">src &lt;&lt; endl;</span></span><br><span class="line"><span class="string">//此时是Mat::ones，创建初始化全为1的矩阵</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Mat src = Mat::zeros(Size(8, 8), CV_8UC3);</span><br><span class="line">src = 127;</span><br><span class="line">cout &lt;&lt; <span class="string">src &lt;&lt; endl;</span></span><br><span class="line"><span class="string">//打印结果为</span></span><br><span class="line"><span class="string">[127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0;</span></span><br><span class="line"><span class="string"> 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0;</span></span><br><span class="line"><span class="string"> 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0;</span></span><br><span class="line"><span class="string"> 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0;</span></span><br><span class="line"><span class="string"> 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0;</span></span><br><span class="line"><span class="string"> 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0;</span></span><br><span class="line"><span class="string"> 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0;</span></span><br><span class="line"><span class="string"> 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0, 127,   0,   0]</span></span><br><span class="line"><span class="string"> 即直接将127赋值给src</span>默认赋值给三通道的第一通道</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Mat src = Mat::zeros(Size(512, 512), CV_8UC3);</span><br><span class="line">src = Scalar(127,127,127);</span><br><span class="line">cout &lt;&lt; <span class="string">src &lt;&lt; endl;</span></span><br><span class="line"><span class="string">imshow(&quot;输出图像&quot;, src</span>);</span><br><span class="line">//Scalar标量函数将三个通道全赋值为127;</span><br><span class="line">//此时三个通道全是127,且生成了一张512*512的三通道灰度纯色图像</span><br><span class="line">//若src = Scalar(255,0,0);则为三通道纯蓝色图像</span><br><span class="line">//若src = Scalar(0,0,255);则为三通道纯红色图像</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Mat m1, m2;</span><br><span class="line">m1 = src.clone();</span><br><span class="line">src.copyTo(m2);</span><br><span class="line">//src.clone()克隆，将src克隆给m1</span><br><span class="line">//src.copyTo(m2)拷贝，将src拷贝给m2</span><br><span class="line">//克隆和拷贝对于两个矩阵直接是相互独立的，即分别为两个独立的存储空间</span><br><span class="line">Mat m3 = src;</span><br><span class="line">//直接赋值src给m3，此时m3与src是同一个矩阵，共用一个存储空间;类似于int &amp;b=a 别名的使用方式</span><br><span class="line">//修改m3，src也会随着被修改；而修改m1,m2都不会影响src，同样修改src也不影响m1,m2</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-图像像素的读写操作"><a href="#5-图像像素的读写操作" class="headerlink" title="5.图像像素的读写操作"></a>5.图像像素的读写操作</h2><h3 id="有关函数-3"><a href="#有关函数-3" class="headerlink" title="有关函数"></a>有关函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">image.at&lt;uchar&gt;(row, col)</span><br><span class="line">image.at&lt;Vec3b&gt;(row, col)</span><br></pre></td></tr></table></figure>
+
+<h3 id="相关代码演示-2"><a href="#相关代码演示-2" class="headerlink" title="相关代码演示"></a>相关代码演示</h3><h4 id="用数组表示"><a href="#用数组表示" class="headerlink" title="用数组表示"></a>用数组表示</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">void QuickDemo::pixel_visit_demo1(Mat&amp; image) &#123;</span><br><span class="line">	int w = image.cols;</span><br><span class="line">	int h = image.rows;</span><br><span class="line">	int dims = image.channels();</span><br><span class="line">	<span class="keyword">for</span> (int row = 0; row &lt; h; row++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (int col = 0; col &lt; w; col++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (dims == 1) &#123;</span><br><span class="line">				int pv = image.at&lt;uchar&gt;(row, col);</span><br><span class="line">				//image.at&lt;uchar&gt;(row, col)获得对应行列像素点的uchar类型的数值</span><br><span class="line">				//(行，列)相当于(y,x）,是的就是(y,x)</span><br><span class="line">				image.at&lt;uchar&gt;(row, col) = 255 - pv;</span><br><span class="line">				//因为8位图像最大值是2的八次方即256,取值0~255</span><br><span class="line">				//255-pv即为取反</span><br><span class="line"></span><br><span class="line">			&#125;//通道数为1，即灰度图像的处理</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (dims == 3) &#123;</span><br><span class="line">				Vec3b bgr = image.at&lt;Vec3b&gt;(row, col);</span><br><span class="line">				image.at&lt;Vec3b&gt;(row, col)[0] = 255 - bgr[0];</span><br><span class="line">				image.at&lt;Vec3b&gt;(row, col)[1] = 255 - bgr[1];</span><br><span class="line">				image.at&lt;Vec3b&gt;(row, col)[2] = 255 - bgr[2];</span><br><span class="line">				//Vec3b相当于一个3*1的矩阵类型，即获得了一个三通道像素点的三个数值，</span><br><span class="line">				b为uchar类型的数值</span><br><span class="line">				//所以[0][1][2]即对应的第一第二第三通道的数值</span><br><span class="line">				</span><br><span class="line">			&#125;//通道数为3，即彩色图像BGR的处理</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	imshow(<span class="string">&quot;输出图像&quot;</span>, image);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="用指针表示"><a href="#用指针表示" class="headerlink" title="用指针表示"></a>用指针表示</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">void QuickDemo::pixel_visit_demo2(Mat&amp; image) &#123;</span><br><span class="line">	int w = image.cols;</span><br><span class="line">	int h = image.rows;</span><br><span class="line">	int dims = image.channels();</span><br><span class="line">	<span class="keyword">for</span> (int row = 0; row &lt; h; row++) &#123;</span><br><span class="line">		uchar* current_row = image.ptr&lt;uchar&gt;(row);</span><br><span class="line">		//image.ptr&lt;uchar&gt;(row)获取当前行的首地址</span><br><span class="line">		<span class="keyword">for</span> (int col = 0; col &lt; w; col++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (dims == 1) &#123;</span><br><span class="line">				int pv = *current_row;</span><br><span class="line">				*(current_row++) = 255 - pv;</span><br><span class="line">				//一通道的像素点，所以一次循环只需赋值一次</span><br><span class="line">			&#125;//通道数为1，即灰度图像的处理</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (dims == 3) &#123;</span><br><span class="line">				*(current_row++) = 255 - *current_row;</span><br><span class="line">				*(current_row++) = 255 - *current_row;</span><br><span class="line">				*(current_row++) = 255 - *current_row;</span><br><span class="line">				//三通道的像素点，因为只相当于由原来的矩阵的一个像素点膨胀了三倍,</span><br><span class="line">				一个像素点的三个数值还是在同一行，所以一次循环要赋值三次</span><br><span class="line"></span><br><span class="line">			&#125;//通道数为3，即彩色图像BGR的处理</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	imshow(<span class="string">&quot;输出图像&quot;</span>, image);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-图像像素的算术操作"><a href="#6-图像像素的算术操作" class="headerlink" title="6.图像像素的算术操作"></a>6.图像像素的算术操作</h2><h3 id="有关函数-4"><a href="#有关函数-4" class="headerlink" title="有关函数"></a>有关函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">add</span><br><span class="line">subtract</span><br><span class="line">multiply</span><br><span class="line">divide</span><br><span class="line">saturate_cast</span><br></pre></td></tr></table></figure>
+
+<h3 id="相关代码演示-3"><a href="#相关代码演示-3" class="headerlink" title="相关代码演示"></a>相关代码演示</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">Mat m = Mat::zeros(Size(4, 4),CV_8UC3);</span><br><span class="line">cout &lt;&lt; <span class="string">m &lt;&lt; endl &lt;&lt; endl;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">m</span> = Scalar(12, 12, 12);//给m矩阵所有像素点三个通道全部赋值为12</span><br><span class="line">cout &lt;&lt; <span class="string">m &lt;&lt; endl &lt;&lt; endl;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">m</span> = m + Scalar(3, 5, 6);//每个像素点的对应的一二三通道分别加3,5,6</span><br><span class="line">cout &lt;&lt; <span class="string">m &lt;&lt; endl &lt;&lt; endl;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">m</span> = m - Scalar(3, 5, 6);//每个像素点的对应的一二三通道分别减3,5,6</span><br><span class="line">cout &lt;&lt; <span class="string">m &lt;&lt; endl &lt;&lt; endl;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">m</span> = m / Scalar(2, 1, 2);//每个像素点的对应的一二三通道分别除2,1,2</span><br><span class="line">cout &lt;&lt; <span class="string">m &lt;&lt; endl &lt;&lt; endl;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Mat dst = Mat::zeros(Size(4, 4), CV_8UC3);</span></span><br><span class="line"><span class="string">Mat n = m</span>.<span class="built_in">clone</span>()+Scalar(2,3,4);</span><br><span class="line">cout &lt;&lt; <span class="string">n &lt;&lt; endl &lt;&lt; endl;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">add(m, n</span>, dst);//add加法函数 相当于dst = m + n</span><br><span class="line">cout &lt;&lt; <span class="string">dst &lt;&lt; endl &lt;&lt; endl;</span></span><br><span class="line"><span class="string">//subtract(m, n, dst</span>)减法  multiply(m, n, dst)乘法  divide(m, n, dst)除法</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">int w = src.cols;</span><br><span class="line">int h = src.rows;</span><br><span class="line">int dims = src.channels();</span><br><span class="line"><span class="keyword">for</span> (int row = 0; row &lt; h; row++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (int col = 0; col &lt; w; col++) &#123;</span><br><span class="line">     </span><br><span class="line">            Vec3b bgr = src.at&lt;Vec3b&gt;(row, col);</span><br><span class="line">            src.at&lt;Vec3b&gt;(row, col)[0] = saturate_cast&lt;uchar&gt;(255 + bgr[0]);</span><br><span class="line">            src.at&lt;Vec3b&gt;(row, col)[1] = saturate_cast&lt;uchar&gt;(255 + bgr[1]);</span><br><span class="line">            src.at&lt;Vec3b&gt;(row, col)[2] = saturate_cast&lt;uchar&gt;(255 + bgr[2]);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//对每个像素点三通道都加上255，正常下已经溢出</span><br><span class="line">//但saturate_cast函数保证了当运算完之后，若结果为负，则转为0;若结果超出255，则为255</span><br><span class="line">//所以作用是防溢出，使图片数据不会损坏</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-滚动条-跟踪条"><a href="#7-滚动条-跟踪条" class="headerlink" title="7.滚动条(跟踪条)"></a>7.滚动条(跟踪条)</h2><h3 id="有关函数-5"><a href="#有关函数-5" class="headerlink" title="有关函数"></a>有关函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">createTrackbar</span><br><span class="line">addWeighted</span><br></pre></td></tr></table></figure>
+
+<h3 id="相关代码演示-4"><a href="#相关代码演示-4" class="headerlink" title="相关代码演示"></a>相关代码演示</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">static void on_track(int lightness, void* image)</span><br><span class="line">&#123;</span><br><span class="line">	Mat src = *(Mat*)image;</span><br><span class="line">	Mat dst = Mat::zeros(src.size(), src.type());</span><br><span class="line">	Mat m = Mat::zeros(src.size(), src.type());</span><br><span class="line">	m = Scalar(lightness, lightness, lightness);//创建调整亮度的数值</span><br><span class="line">	subtract(src, m, dst);//定义亮度变化为减</span><br><span class="line">	imshow(<span class="string">&quot;亮度调整&quot;</span>, dst);//显示调整亮度之后的图片</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">static void on_track1(int lightness, void*image)</span><br><span class="line">&#123;</span><br><span class="line">	Mat src = *(Mat*)image;</span><br><span class="line">	Mat dst = Mat::zeros(src.size(), src.type());</span><br><span class="line">	Mat m = Mat::zeros(src.size(), src.type());</span><br><span class="line">	m = Scalar(lightness, lightness, lightness);//创建调整亮度的数值</span><br><span class="line">	add(src, m, dst);//定义亮度变化为减</span><br><span class="line">	imshow(<span class="string">&quot;亮度调整&quot;</span>, dst);//显示调整亮度之后的图片</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">static void contrast(int contrast_value, void* image)</span><br><span class="line">&#123;</span><br><span class="line">	Mat src = *(Mat*)image;</span><br><span class="line">	Mat dst = Mat::zeros(src.size(), src.type());</span><br><span class="line">	Mat m = Mat::zeros(src.size(), src.type());</span><br><span class="line">	double a = contrast_value / 100;//</span><br><span class="line">	addWeighted(src, a , m, 0.0, 15, dst);//融合了图片src,m  加权相加后再加上差值15  src*a+m*0+15</span><br><span class="line">	imshow(<span class="string">&quot;亮度调整&quot;</span>,dst);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void QuickDemo::track_bar_demo(Mat&amp; image)</span><br><span class="line">&#123;</span><br><span class="line">	namedWindow(<span class="string">&quot;亮度调整&quot;</span>, WINDOW_AUTOSIZE);</span><br><span class="line">	Mat dst = Mat::zeros(image.size(), image.type());</span><br><span class="line">	Mat m = Mat::zeros(image.size(), image.type());</span><br><span class="line">	</span><br><span class="line">	int lightness = 50;//定义初始亮度50</span><br><span class="line">	int max_value = 255;//定义最大值为255</span><br><span class="line">	int contrast_value = 100;</span><br><span class="line">	createTrackbar(<span class="string">&quot;减少亮度&quot;</span>, <span class="string">&quot;亮度调整&quot;</span>, &amp;lightness, max_value, on_track,(void*)(&amp;image));</span><br><span class="line">	createTrackbar(<span class="string">&quot;增加亮度&quot;</span>, <span class="string">&quot;亮度调整&quot;</span>, &amp;lightness, max_value, on_track1,(void*)(&amp;image));</span><br><span class="line">	createTrackbar(<span class="string">&quot;简单调整对比度&quot;</span>, <span class="string">&quot;亮度调整&quot;</span>, &amp;contrast_value, 1000, contrast, (void*)(&amp;image));</span><br><span class="line">	//建立跟踪条 第一个参数是跟踪条的name，第二个是窗口名(与上面对应)，第三个是亮度初始值</span><br><span class="line">	//第四个是可调整的最大值，第五个是调用的函数（即跟踪条状态变化时会调用）</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">int createTrackbar(const String &amp; trackbarname,</span><br><span class="line">                       const String &amp; winname,</span><br><span class="line">                       int * value,</span><br><span class="line">                       int count,</span><br><span class="line">                       TrackbarCallback onChange = 0,</span><br><span class="line">                       void * userdata = 0)</span><br><span class="line">各参数意义如下：</span><br><span class="line">trackbarname—滑动条显示在窗口中的名字；</span><br><span class="line">winname—滑动条所在窗口的名字；</span><br><span class="line">value—滑动条初始值；</span><br><span class="line">count—滑动条最大值，值得注意的是滑动条的最小值总为0；</span><br><span class="line">onChange—回调函数名；</span><br><span class="line">userdata—如果用户想传一些自定义的数据给回调函数，可以放在userdata中。(必须是void指针类型)</span><br><span class="line"></span><br><span class="line">权重相加(图片融合):</span><br><span class="line">void addWeighted( const CvArr* src1, </span><br><span class="line">					double alpha,</span><br><span class="line">					const CvArr* src2, </span><br><span class="line">					double beta,</span><br><span class="line">					double gamma, </span><br><span class="line">					CvArr* dst )</span><br><span class="line">第一个参数是输入图片1</span><br><span class="line">第二个是输入图片1的权重</span><br><span class="line">第三个输入图片2</span><br><span class="line">第四个输入图片2权重</span><br><span class="line">第五个是加权后的偏差 //公式=src1*alpha+src2*beta+gamma</span><br><span class="line">第六个是输出的图片</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">回调函数原型：</span><br><span class="line">void  onChangeTrackBar(int pos, void * userdata)</span><br><span class="line">&#123;</span><br><span class="line">	.......</span><br><span class="line">&#125;</span><br><span class="line">第一个参数pos为滑动条的当前位置；</span><br><span class="line">第二个参数为函数createTrackbar()中的参数userdata。</span><br><span class="line">                        </span><br><span class="line">原文链接：https://blog.csdn.net/wenhao_ir/article/details/127717819</span><br></pre></td></tr></table></figure>
+
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="有关函数-6"><a href="#有关函数-6" class="headerlink" title="有关函数"></a>有关函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="相关代码演示-5"><a href="#相关代码演示-5" class="headerlink" title="相关代码演示"></a>相关代码演示</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2><h3 id="有关函数-7"><a href="#有关函数-7" class="headerlink" title="有关函数"></a>有关函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="相关代码演示-6"><a href="#相关代码演示-6" class="headerlink" title="相关代码演示"></a>相关代码演示</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
-<ul>
-    <li>
-        <div class="all active" data-rel="All">All
-            
-                <small>(2)</small>
-            
-        </div>
-    </li>
-    
-</ul>
-<div class="left-bottom">
-    <div class="menus">
-        
-            
-            
-            
+<h1 id="end…"><a href="#end…" class="headerlink" title="end…"></a>end…</h1><hr>
+
+      
     </div>
-    <div>
-        
-        
-    </div>
-</div>
-<input type="hidden" id="yelog_site_posts_number" value="2">
+    <footer class="article-footer">
+      <a data-url="https://yiwanghehe.github.io/2024/03/01/yiwanghehe'dicks/" data-id="cltlohbq600014suv1j315357" data-title="opencv入门学习(基于c++)" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li></ul>
 
-<div style="display: none">
-    <span id="busuanzi_value_site_uv"></span>
-    <span id="busuanzi_value_site_pv"></span>
-</div>
+    </footer>
+  </div>
+  
+</article>
 
-    </div>
-    <div class="nav-right">
-        <div class="friends-area">
-    <div class="friends-title">
-        Links
-        <i class="iconfont icon-left"></i>
-    </div>
-    <div class="friends-content">
-        <ul>
-            
-            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
-            
-        </ul>
-    </div>
-</div>
-        <div class="title-list">
-    <div class="right-top">
-        <div id="default-panel">
-            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
-            <div class="right-title">All</div>
-            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
-        </div>
-        <div id="search-panel">
-            <i class="iconfont icon-left" data-title="返回"></i>
-            <input id="local-search-input" autocomplete="off"/>
-            <label class="border-line" for="input"></label>
-            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
-            <i class="iconfont icon-tag" data-title="标签"></i>
-        </div>
-        <div id="outline-panel" style="display: none">
-            <div class="right-title">大纲</div>
-            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
-        </div>
-    </div>
 
-    <div class="tags-list">
-    <input id="tag-search" />
-    <div class="tag-wrapper">
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>opencv</a>
-            </li>
-        
-    </div>
 
-</div>
-
+  
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/01/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2024-03-01T14:24:04.731Z" itemprop="datePublished">2024-03-01</time>
+</a>
     
-    <div id="local-search-result">
-
-    </div>
+  </div>
+  <div class="article-inner">
     
-    <nav id="title-list-nav">
+    
+      <header class="article-header">
         
-        
-        <a  class="All "
-           href="/2024/03/01/yiwanghehe'dicks/"
-           data-tag="opencv"
-           data-author="" >
-            <span class="post-title" title="opencv入门学习(基于c++)">opencv入门学习(基于c++)</span>
-            <span class="post-date" title="2024-03-01 22:32:37">2024/03/01</span>
-        </a>
-        
-        
-        <a  class="All "
-           href="/2024/03/01/hello-world/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Hello World">Hello World</span>
-            <span class="post-date" title="2024-03-01 22:24:04">2024/03/01</span>
-        </a>
-        
-        <div id="no-item-tips">
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/03/01/hello-world/">Hello World</a>
+    </h1>
+  
 
-        </div>
-    </nav>
-    <div id="outline-list">
-    </div>
-</div>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
     </div>
-    <div class="hide-list">
-        <div class="semicircle" data-title="切换全屏 快捷键 s">
-            <div class="brackets first"><</div>
-            <div class="brackets">&gt;</div>
-        </div>
+    <footer class="article-footer">
+      <a data-url="https://yiwanghehe.github.io/2024/03/01/hello-world/" data-id="cltlohbq000004suvb0vk93om" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/" rel="tag">opencv</a></li></ul>
     </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/opencv/" style="font-size: 10px;">opencv</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/03/01/yiwanghehe'dicks/">opencv入门学习(基于c++)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/01/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
 </aside>
-<div id="post" class="index">
-    <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
-    
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0"><span class="toc-text">博客平台</span></a></li></ol>
-    
-<style>
-    .left-col .switch-btn,
-    .left-col .switch-area {
-        display: none;
-    }
-    .toc-level-3 i,
-    .toc-level-3 ol {
-        display: none !important;
-    }
-</style>
-</div>
-            <h1 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h1><p>这个博客通过 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 生成，部署在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>主题 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
-<p><code>3-hexo</code> 主题使用交流可以加 Q群: <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=e8cf083cc097141eaf323396f1766809b8e90ff00c67bb441898f672892f6904"><img data-ignore border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="3-hexo使用交流" title="3-hexo使用交流"></a></p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad&#x2F;手机等移动端适配</li>
-<li>页面全局快捷键 <a target="_blank" rel="noopener" href='http://yelog.org/2017/03/24/3-hexo-shortcuts/'>3-hexo快捷键说明</a></li>
-</ul>
-
-        </article>
         
-        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 yiwanghehe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
-    <div class="copyright">
-        <p class="footer-entry">
-    2024 yiwanghehe
-</p>
-<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+  </div>
+</footer>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
-<a class="" id="rocket" ></a>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
 
-</div>
 
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
 </body>
-<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
-
-<script src="/js/script.js?v=1.1.0" ></script>
-<script>
-    var img_resize = 'default';
-    function initArticle() {
-        /*渲染对应的表格样式*/
-        
-            $("#post .pjax table").addClass("green_title");
-        
-
-        /*渲染打赏样式*/
-        
-
-        /*高亮代码块行号*/
-        
-
-        /*访问数量*/
-        
-        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
-        
-
-        /*代码高亮，行号对齐*/
-        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
-
-        
-        
-    }
-
-    /*打赏页面隐藏与展示*/
-    
-
-</script>
-
-<!--加入行号的高亮代码块样式-->
-
-<!--自定义样式设置-->
-<style>
-    
-    
-    .nav {
-        width: 542px;
-    }
-    .nav.fullscreen {
-        margin-left: -542px;
-    }
-    .nav-left {
-        width: 120px;
-    }
-    
-    
-    @media screen and (max-width: 1468px) {
-        .nav {
-            width: 492px;
-        }
-        .nav.fullscreen {
-            margin-left: -492px;
-        }
-        .nav-left {
-            width: 100px;
-        }
-    }
-    
-    
-    @media screen and (max-width: 1024px) {
-        .nav {
-            width: 492px;
-            margin-left: -492px
-        }
-        .nav.fullscreen {
-            margin-left: 0;
-        }
-    }
-    
-    @media screen and (max-width: 426px) {
-        .nav {
-            width: 100%;
-        }
-        .nav-left {
-            width: 100%;
-        }
-    }
-    
-    
-    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
-        color: #383636;
-    }
-    
-    
-    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
-        color: #5e5e5f;
-    }
-    
-    
-    .nav-right nav a.hover, #local-search-result a.hover{
-        background-color: #e2e0e0;
-    }
-    
-    
-
-    /*列表样式*/
-    
-
-    /* 背景图样式 */
-    
-    
-
-
-    /*引用块样式*/
-    
-
-    /*文章列表背景图*/
-    
-
-    
-</style>
-
-
-
-
-
-
-
 </html>
